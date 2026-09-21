@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EsWorld Blends — Cosmic Edition</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #1a1a2e, #0f0f1a 60%, #000 100%);
+      color: #e6e6ff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Subtle starfield */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('stars.png');
+      background-size: cover;
+      opacity: 0.25;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #9bb3ff, #d7c8ff, #a8e0ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      color: #cfd6ff;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(150, 180, 255, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(180, 200, 255, 0.6);
+    }
+
+    .order-btn {
+      display: inline-block;
+      padding: 18px 40px;
+      background: linear-gradient(90deg, #4a4aff, #7f5bff, #a86bff);
+      color: #fff;
+      font-size: 1.4rem;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(120, 120, 255, 0.5);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .order-btn:hover {
+      background: linear-gradient(90deg, #6a6aff, #9f7bff, #c88bff);
+      box-shadow: 0 0 30px rgba(160, 160, 255, 0.7);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>EsWorld Blends</h1>
+    <p>Cosmic espresso blends crafted in Anchorage — brewed under nebula light and café mythos.</p>
+
+    <div class="gallery">
+      <img src="decaf.jpg" alt="Decaf Blend">
+      <img src="espresso.jpg" alt="Espresso Blend">
+      <img src="drip.jpg" alt="Drip Blend">
+      <img src="coldbrew.jpg" alt="Cold Brew Blend">
+    </div>
+
+    <a class="order-btn" href="https://es-world-espresso-blends.square.site" 
+       target="_blank" rel="noopener noreferrer">
+      Order Now
+    </a>
+  </div>
+</body>
+</html>
